@@ -25,7 +25,7 @@ class Database(Base):
                 query, self._configuration.type_adapter.to_db_types(params)
             )
 
-            return Result(self._cursor)  # TODO: adapt types back
+            return Result(self._cursor)
         except Exception:
             self.rollback()
 
